@@ -1,0 +1,38 @@
+<div class="sign-up m-auto">
+<h4 class="m-0 pt-2 pb-2 text-center">Registration Form</h2>
+<div class="sign-up-body p-3">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  
+
+  <div class="form-group">
+    <%= f.label :email %> <p class="text-danger d-inline">*</p><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"w-100 form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :username %> <p class="text-danger d-inline">*</p><br />
+    <%= f.text_field :username, class:"w-100 form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :first_name %> <p class="text-danger d-inline">*</p><br />
+    <%= f.text_field :username, class:"w-100 form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :last_name %> <p class="text-danger d-inline">*</p><br />
+    <%= f.text_field :last_name, class:"w-100 form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em> <p class="text-danger d-inline">*</p>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class:"w-100 form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class: "btn-success w-100 mt-3" %>
+  </div>
+<% end %>
+</div>
+</div>
