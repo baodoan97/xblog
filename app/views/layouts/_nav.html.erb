@@ -1,24 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="nav">
   <div class="container">
-    <%= link_to '<strong class="text-danger">X</strong>-Blog'.html_safe, root_path, class:"navbar-brand" %> 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav m-auto">
-        <li class="nav-item active">
-          <%= link_to 'Home', root_path, class:'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+  <%= link_to '<h3 class="text-center"><strong class="text-danger">X</strong>-Blog</h3>'.html_safe, root_path, class:"w-100" %>
+  <hr/>
+  
+  <div class="row">
+    <div class="col-lg-6 col-xs-12 m-auto">
+      <ul class="menu-bar">
+        <li><%= link_to 'Home', root_path, class:"active" %></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle p-0" data-toggle="dropdown"><i class="far fa-user"></i></a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Sign In</a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item">Sign Up</a>
+            </div>
         </li>
       </ul>
     </div>
   </div>
-</nav>
+  </div>
+</div>

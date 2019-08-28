@@ -1,1 +1,55 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+*{
+	margin: 0;
+	padding: 0;
+}
+.nav{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.nav .container > a {
+	color: black;
+	display: block;
+}
+
+.nav .container a:hover{
+	text-decoration: none;
+}
+
+.nav hr{
+	border: 0.5px solid black;
+	width: 100%;
+	display: block;
+	margin-top: 0;
+	margin-bottom: 4px;
+}
+
+.menu-bar{
+	list-style-type: none;
+	font-size: 15px;
+	text-align: center;
+}
+
+.menu-bar li{
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.menu-bar li a{
+	color: black;
+}
+
+.menu-bar li a:hover{
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.menu-bar li a.active{
+	font-weight: 700;
+}
+.wrapper{
+	min-height: 550px;
+}

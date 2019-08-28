@@ -6,7 +6,8 @@ ruby '2.5.3'
 gem 'mysql2'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-
+gem 'font-awesome-sass', '~> 5.6.1'
+gem "devise"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 
