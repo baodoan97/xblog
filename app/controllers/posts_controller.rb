@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	before_action :set_post, only: [:edit, :update, :show, :destroy]
 	before_action :require_user, except: [:index, :show]
-	# before_action :require_same_user, only: [:edit, :update, :destroy]
+	before_action :require_same_user, only: [:edit, :update, :destroy]
 	def new
 		@post = Post.new
 	end
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
-		# @post.user = current_user
+		@post.user = current_user
 		if @post.save
 			flash[:success] = "Post was successfully created"
 			# redirect_to post_path(@post)
@@ -33,7 +33,8 @@ class PostsController < ApplicationController
 	def update
 		if @post.update(post_params)
 			flash[:success] = "Post was successfully updated"
-			redirect_to post_path(@post)
+			# redirect_to post_path(@post)
+			redirect_to root_path
 		else
 			render 'edit'
 		end
@@ -54,11 +55,11 @@ class PostsController < ApplicationController
 			params.require(:post).permit(:title, :content)
 		end
 
-		# def require_same_user
-		# 	if current_user != @post.user && current_user.admin?
-		# 		flash[:danger] = "You can only edit or delete your own posts"
-		# 		redirect_to root_path
-		# 	end
-		# end
+		def require_same_user
+			if current_user != @post.user
+				flash[:danger] = "You can only edit or delete your own posts"
+				redirect_to root_path
+			end
+		end
 
 end
