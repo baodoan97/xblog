@@ -6,8 +6,8 @@
 					<strong><h3 class="mb-0"><%= @post.title %></h3></strong>
 					<small><%= @post.user.username%> posted at <%= @post.created_at.strftime("%F") %></small> 
 				</div>
-				<div class="col-12 mt-3 post-body">
-					<%= @post.content %>
+				<div class="col-12 mt-3 post-body text-justify">
+					<%= raw(@post.content) %>
 				</div>
 			</div>
 		</div>
