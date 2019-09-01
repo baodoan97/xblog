@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: ab55dff215999c6efbb9190459bc84ab2514ea1c
+  specs:
+    ckeditor (5.0.0)
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -116,6 +123,7 @@ GEM
       mimemagic (~> 0.3.2)
     method_source (0.9.2)
     mimemagic (0.3.3)
+    mini_magick (4.9.5)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
@@ -230,12 +238,14 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   chromedriver-helper
+  ckeditor!
   coffee-rails (~> 4.2)
   devise
   font-awesome-sass (~> 5.6.1)
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  mini_magick
   mysql2
   puma (~> 3.11)
   rails (~> 5.2.3)

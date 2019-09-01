@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users, skip: [:sessions]
   as :user do
   	get 'signup', to: 'devise/registrations#new'
