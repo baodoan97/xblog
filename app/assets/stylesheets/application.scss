@@ -179,3 +179,45 @@ a.custom-card, a.custom-card:hover {
   width:100%;
   height:auto;
 }
+
+.new-post-btn{
+	color: white;
+	background-color: #1170cc;
+	font-size: 18px;
+	padding: 5px;
+	border-radius: 10px;
+	font-weight: 600;
+}
+
+.new-post-btn:hover{
+	text-decoration: none;
+	background-color: #1170cce8 ;
+}
+
+.info-header{
+	height: 100px;
+	background-color: white;
+    border-radius: 10px;
+    border: 1px solid #c6c4c4;
+    box-shadow: 0.2px 0.2px 0.2px #8c8787;
+    margin-top: 10px;
+}
+
+.info-body-tab.active{
+	border-bottom: 2px solid #1170cc;
+}
+
+.info-post-item{
+	margin-top: 10px;
+	height: 70px;
+	background-color: white;
+	border-radius: 7px;
+    border: 1px solid #c6c4c4;
+    box-shadow: 0.2px 0.2px 0.2px #8c8787;
+}
+
+.edit-post-btn{
+	font-size: 12px;
+	border-radius: 5px;
+	padding: 6px;
+}

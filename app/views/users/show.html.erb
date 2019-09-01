@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-lg-2">
+			<strong><h4><%= @user.first_name%>'s Profile</h4></strong>
+		</div>
+		<div class="col-md-6 col-lg-10 text-right">
+			 <%= link_to 'Create New Post', new_post_path, class:"text-white new-post-btn" %>
+		</div>
+	</div>
+	<div class="row ml-0 mr-0">
+		<div class="col-12 info-header p-3">
+			Email: <%= @user.email %><br>
+			Username: <%= @user.username %><br>
+			Full Name: <%= @user.first_name %> <%= @user.last_name %>
+		</div>
+	</div>
+	<div class="row ml-0 mr-0 mt-3">
+		<div class="col-6 col-md-2 text-center info-body-tab active">
+			<strong><p>Posts</p></strong>
+		</div>
+		<div class="col-6 col-md-2 text-center info-body-tab">
+			<strong><p>Comments</p></strong>
+		</div>
+	</div>
+	<hr style="border: 1px solid #e0dbdb; margin-top: -0.5px"/>
+	<div class="row ml-0 mr-0">
+		<% @user.posts.each do |post| %>
+			<div class="col-12 info-post-item p-2 position-relative">
+				<strong><p class="mb-2"><%= post.title %></p></strong>
+				<%= link_to 'Edit', edit_post_path(post), class:"position-absolute edit-post-btn btn btn-secondary ", style:"top:10%; right: 2%" %>
+				<%= raw(post.content.truncate(120)) %>
+			</div>
+		<% end %>
+	</div>
+</div>

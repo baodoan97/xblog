@@ -10,4 +10,5 @@ class User < ApplicationRecord
   validates :last_name, presence: true, 	length: {minimum: 2, maximum: 10}
 
   has_many :posts
+  has_many :comments, dependent: :destroy
 end
