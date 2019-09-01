@@ -1,0 +1,9 @@
+<div class="container-fluid">
+	<%= form_for comment do |f| %>
+	    <%= f.hidden_field :post_id, value: post.id %>
+	    <div class="form-group">
+	    	<%= f.text_area :content, class:"form-control" %>
+	    </div>
+	  	<%= f.submit "Send" %>
+	<% end %>
+</div>

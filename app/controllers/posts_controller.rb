@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		
+		@comment = Comment.new
 	end	
 
 	def edit
@@ -47,19 +47,19 @@ class PostsController < ApplicationController
 	end
 
 	private
-		def set_post
-			@post = Post.find(params[:id])
-		end
+	def set_post
+		@post = Post.find(params[:id])
+	end
 
-		def post_params
-			params.require(:post).permit(:title, :content)
-		end
+	def post_params
+		params.require(:post).permit(:title, :content)
+	end
 
-		def require_same_user
-			if current_user != @post.user
-				flash[:danger] = "You can only edit or delete your own posts"
-				redirect_to root_path
-			end
+	def require_same_user
+		if current_user != @post.user
+			flash[:danger] = "You can only edit or delete your own posts"
+			redirect_to root_path
 		end
+	end
 
 end
