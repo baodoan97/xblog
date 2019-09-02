@@ -6,73 +6,21 @@
 		<hr>
 		<div class="latest-body">
 			<div class="container-fluid">
-				<div class="row">
-					<div class="col-12 mt-4">
-						<div class="latest-item">
-							<div class="w-50 d-inline-block item-img">
-								<%= image_tag 'slide.jpg' %>
+				<% @posts.each do |item| %>
+					<div class="row">
+						<div class="col-12 mt-4 latest-item">
+							<div class="item-header">
+								<strong><p class="mb-0"> <%= item.title.truncate(200) %> </p></strong>
+								<%= item.content.truncate(350).html_safe %>
 							</div>
-							<div class="w-50 d-inline-block item-detail">
-								<div class="row mb-2">
-									<p class="w-100 m-0">Bao Doan</p><br/>
-									<small>a day ago</small>
-								</div>
-								<div class="row" style="height: 180px; overflow:hidden">
-									<h4>This is the title of the post</h4>
-									<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar venenatis purus, eu malesuada sapien luctus id. Suspendisse a elit a dolor semper vulputate sagittis eget ipsum. Lorem ipsum dolor sit amet</p>
-								</div>
-								<hr>
-								<div class="row mt-2">
-									<small>0 comment</small>
-								</div>
+							<div class="item-info mt-1">
+								<span class="far fa-comment"> <%= item.comments.count %></span>
+								<small><p class="text-right d-inline float-right"><%= item.user.username %></p></small>
 							</div>
 						</div>
 					</div>
-					<div class="col-12 mt-4">
-						<div class="latest-item">
-							<div class="w-50 d-inline-block item-img">
-								<%= image_tag 'slide.jpg' %>
-							</div>
-							<div class="w-50 d-inline-block item-detail">
-								<div class="row mb-2">
-									<p class="w-100 m-0">Bao Doan</p><br/>
-									<small>a day ago</small>
-								</div>
-								<div class="row" style="height: 180px; overflow:hidden">
-									<h4>This is the title of the post</h4>
-									<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar venenatis purus, eu malesuada sapien luctus id. Suspendisse a elit a dolor semper vulputate sagittis eget ipsum. Lorem ipsum dolor sit amet</p>
-								</div>
-								<hr>
-								<div class="row mt-2">
-									<small>0 comment</small>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 mt-4">
-						<div class="latest-item">
-							<div class="w-50 d-inline-block item-img">
-								<%= image_tag 'slide.jpg' %>
-							</div>
-							<div class="w-50 d-inline-block item-detail">
-								<div class="row mb-2">
-									<p class="w-100 m-0">Bao Doan</p><br/>
-									<small>a day ago</small>
-								</div>
-								<div class="row" style="height: 180px; overflow:hidden">
-									<h4>This is the title of the post</h4>
-									<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar venenatis purus, eu malesuada sapien luctus id. Suspendisse a elit a dolor semper vulputate sagittis eget ipsum. Lorem ipsum dolor sit amet</p>
-								</div>
-								<hr>
-								<div class="row mt-2">
-									<small>0 comment</small>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<% end %>
 			</div>
 		</div>
-		
 	</div>
 </div>

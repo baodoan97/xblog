@@ -2,11 +2,15 @@
 	<div class="row ml-0 mr-0">
 		<% @posts.each do |item| %>
 			<div class="col-12 post-item">
-				<strong><p class="m-0"> <%= link_to item.title.truncate(100), post_path(item) %> </p></strong>
+				<strong>
+					<p class="m-0"> 
+						<%= link_to item.title.truncate(100), post_path(item) %>
+					 </p>
+				</strong>
 				<small>
 					<%= item.user.username %> posted at <%= item.created_at.strftime('%F') %>
 				</small>	
-				<%= raw(item.content.truncate(200)) %>
+				<%= raw(item.content.truncate(160)) %>
 			</div>
 		<% end %>
 	</div>

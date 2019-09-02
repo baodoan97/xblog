@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
 	def index
 		# @post = Post.paginate(page: params[:page], per_page: 5)
-		@posts = Post.all
+		@posts = Post.limit(3).order('id desc')
 	end
 
 	def create

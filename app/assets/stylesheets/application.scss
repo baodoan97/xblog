@@ -126,39 +126,19 @@
 }
 
 .latest-body{
-	margin-top: 20px;
+	margin-top: 15px;
 	padding: 15px 0px;
 }
 
 .latest-item{
-	height: 300px;
-	border: 0.3px solid #d0cbcb;
+	height: 200px;
+	border: 2px solid #dedede;
+	padding: 20px;
 }
 
-.item-img{
-	height: 300px;
-	float:left;
-}
-
-.item-img img{
-	height: 100%;
-	width: 100%;
-}
-
-.item-detail{
-	padding: 30px 40px;
-	float:left;
-	height: 300px;
-}
-
-.item-detail .row{
-	margin: 0;
-}
-
-.item-detail hr{
-	border: 0.2px solid #948a8a;
-	width: 100%;
-	box-shadow: none;
+.item-header{
+	height: 140px;
+	border-bottom: 1px solid #dedede;
 }
 
 .sign-in{
