@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
 	def index
 		# @post = Post.paginate(page: params[:page], per_page: 5)
+		@posts = Post.all
 	end
 
 	def create
@@ -24,6 +25,7 @@ class PostsController < ApplicationController
 
 	def show
 		@comment = Comment.new
+		@recent_posts = Post.limit(3).order('id desc')
 	end	
 
 	def edit

@@ -1,0 +1,14 @@
+
+<% obj.each do |cmt| %>
+	<div class="comment-row w-100">
+		<div class="col-12"><%= cmt.content %></div>
+		<div class="col-12">
+			<strong>
+				<small> 
+				<%= link_to cmt.user.username, user_path(cmt.user) %> at <%=cmt.created_at.strftime("%F") %>
+				</small>
+			</strong>
+		</div>
+		
+	</div>
+<% end %>

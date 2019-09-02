@@ -221,3 +221,54 @@ a.custom-card, a.custom-card:hover {
 	border-radius: 5px;
 	padding: 6px;
 }
+
+.comment hr{
+	border: 0.5px solid #cac5c5;
+	width: 100%;
+	margin-top: 0;
+}
+
+.comment-row{
+	margin-top: 5px;
+}
+
+.post-detail{
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #b5afaf;
+    border: 1px solid #b5afaf;
+}
+
+.recent-post .card{
+	border-radius: 5px;
+	border: 1px solid #b5afaf;
+	box-shadow: 1px 1px #b5afaf;
+}
+
+.recent-post hr{
+	border: 0.5px solid #dedede;
+	width: 100%;
+	margin-top: 0;
+}
+
+.recent-post-item a{
+	color: black;
+}
+
+.recent-post-item a:hover{
+	text-decoration:none;
+}
+
+.post-item{
+	padding: 5px;
+	margin-top: 10px;
+	height: 90px;
+	border-bottom: 1px solid #dedede;
+}
+
+.post-list .row a{
+	color:black;
+}
+
+.post-list .row a:hover{
+	text-decoration:none;
+}
