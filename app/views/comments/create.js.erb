@@ -1,1 +1,2 @@
-// $('.comment-row').prepend('<%= j render 'comments/comments', obj: @comment %>');
+$('.comment-row').prepend('<%= j render 'comments/comments', cmt: @comment %>');
+$('#comment_content').val('');

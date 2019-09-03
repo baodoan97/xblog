@@ -38,7 +38,13 @@
 	<div class="row mt-5 ml-0 mr-0 comment">
 		<strong>Comments</strong>
 		<hr>
-		<%= render 'comments/comments', obj: @post.comments.order('id desc') %>
+		<div class="comment-row w-100">
+		<% @post.comments.order('id desc').each do |cmt| %>
+			
+				<%= render 'comments/comments', cmt: cmt %>
+			
+		<% end %>
+		</div>
 	</div>
 	<div class="row mt-5 ml-0 mr-0">
 		<%= render 'comments/form', comment: @comment, post: @post if user_signed_in?%>

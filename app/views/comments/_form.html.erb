@@ -1,5 +1,5 @@
 <div class="container-fluid comment-body">
-	<%= form_for comment do |f| %>
+	<%= form_for comment, remote: true do |f| %>
 	    <%= f.hidden_field :post_id, value: post.id %>
 	    <div class="form-group">
 	    	<%= f.text_area :content, class:"form-control", placeholder:"Write a comment" %>
